@@ -2,7 +2,7 @@
 
 ## Info
 * Using k3d related images
-* Airgap build, no images pull related to k3s
+* Airgap build, no images pull triggered while starting k3s docker
 * Contains docker registry with image, can be used without external
 
 ## Build
