@@ -1,0 +1,7 @@
+#disable:
+#  - "traefik"
+kube-apiserver-arg:
+  - "service-node-port-range=1025-65535"
+tls-san: k3s-service
+#flannel-cni-conf: "/etc/rancher/k3s/10-flannel.conflist"
+install-k3s-skip-download: true
