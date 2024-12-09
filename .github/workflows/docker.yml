@@ -19,7 +19,7 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
   # k3s version
-  K3S_VERSION: v1.30.6-k3s1
+  K3S_VERSION: "v1.30.6-k3s1"
 
 jobs:
   build:
@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
           context: .
-          build-args: ["K3S_VERSION"]
+          build-args: ["K3S_VERSION=$K3S_VERSION"]
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
